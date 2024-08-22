@@ -49,7 +49,7 @@ export DATABASE_NAME="my_database"
 
 You can use the library to execute api methods:
 
-### List all BigLake Metastore Catalogs in a given project & region
+### Catalog - List all BigLake Metastore Catalogs in a given project & region
 
 ```
 python blms_api.py catalog-list \
@@ -57,7 +57,7 @@ python blms_api.py catalog-list \
 --location=${LOCATION}
 ```
 
-### Creating a new BigLake Metastore Catalog in a project & region
+### Catalog - Creating a new BigLake Metastore Catalog in a project & region
 
 ```
 python blms_api.py catalog-create \
@@ -66,7 +66,7 @@ python blms_api.py catalog-create \
 --catalog=${CATALOG_NAME}
 ```
 
-### List all Databases in a BigLake Metastore Catalog
+### Database - List all Databases in a BigLake Metastore Catalog
 
 ```
 python blms_api.py database-list \
@@ -75,7 +75,7 @@ python blms_api.py database-list \
 --catalog=${CATALOG_NAME}
 ```
 
-### Create a new Databse in a BigLake Metastore Catalog
+### Database - Create a new Databse in a BigLake Metastore Catalog
 
 ```
 python blms_api.py database-create \
@@ -85,6 +85,15 @@ python blms_api.py database-create \
 --database=${DATABASE_NAME}
 ```
 
+### Table - List all Tables in a Database in a BigLake Metastore Catalog
+
+```
+python blms_api.py table-list \
+--project_id=${PROJECT_ID} \
+--location=${LOCATION} \
+--catalog=${CATALOG_NAME} \
+--database=${DATABASE_NAME}
+```
 
 
 
